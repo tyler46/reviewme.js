@@ -5,17 +5,13 @@
   <title>review me</title>
 </head>
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  <script src="https://raw.github.com/documentcloud/underscore/master/underscore.js"></script>
-  <script src="https://raw.github.com/documentcloud/backbone/master/backbone.js"></script>
+    <script type='text/javascript' data-main="scripts/app.js" src="scripts/lib/require.js"></script>
+    <div id="repositories">
+    </div>
 
-  <div id="repositories">
-    <ul id="repositories-list"></ul>
-  </div>
-
-  <script id="repository-tmpl" type="text/template">
-    <%- name %>
-  </script>
-  <script src="reviewme.js"></script>
+    <!-- templates -->
+    <script id="repository-list-item" type="text/template">
+        <%- full_name %>
+    </script>
 </body>
 </html>
