@@ -3,12 +3,15 @@ define([
     'underscore',
     'backbone',
     'collections/repositories',
-    'views/repositories'
-], function($, _, Backbone, Repositories, RepositoryListView) {
+    'models/repository',
+    'views/repositories',
+    'views/repository_details'
+], function($, _, Backbone, Repositories, Repository, RepositoryListView, RepositoryDetailsView) {
     var AppRouter = Backbone.Router.extend({
 
         routes: { 
-            "": "list"
+            "": "list",
+            "repositories/:id": "repositoryDetails"
         },
 
         list: function(){
@@ -16,6 +19,13 @@ define([
             this.repositoryListView = new RepositoryListView({ model: this.repositoryList });
             this.repositoryList.fetch();
             $('#repositories').html(this.repositoryListView.render().el);
+        },
+
+        repositoryDetails: function(id) {
+            this.repository = this.repositoryList.get(id);
+            console.log(this.repository);
+            this.repositoryDetailsView = new RepositoryDetailsView({ model: this.repository });
+            $('#repository-details').html(this.repositoryDetailsView.render().el);
         }
     });
 

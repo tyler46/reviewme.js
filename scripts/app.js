@@ -14,12 +14,16 @@ require.config({
                 'jquery'
             ],
             exports: 'Backbone'
+        },
+        'mustache': {
+            exports: 'mustache'
         }
     },
 
     paths: {
         underscore: "lib/underscore",
         jquery: "lib/jquery-1.8.1.min",
+        mustache: "lib/mustache",
         backbone: "lib/backbone",
     },
 });

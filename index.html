@@ -3,15 +3,27 @@
 <head>
   <meta charset="utf-8">
   <title>review me</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
     <script type='text/javascript' data-main="scripts/app.js" src="scripts/lib/require.js"></script>
     <div id="repositories">
     </div>
 
+    <div id="repository-details">
+    </div>
     <!-- templates -->
     <script id="repository-list-item" type="text/template">
-        <%- full_name %>
+      <a href='#repositories/{{id}}'> {{name}}</a>
     </script>
+
+    <script id="repository-item-view" type="text/template">
+    <div class="details-col">
+        {{id}}
+        {{watchers}}
+        <a href='{{html_url}}'>{{full_name}}</a>
+    </div>
+    </script>
+
 </body>
 </html>
