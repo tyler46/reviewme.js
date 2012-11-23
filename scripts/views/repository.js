@@ -1,18 +1,20 @@
 define([
     'jquery',
     'underscore',
+    'mustache',
     'backbone'
-], function($, _, Backbone) {
+], function($, _, Mustache, Backbone) {
     var RepositoryView = Backbone.View.extend({
         tagname: 'li',
 
-        template: _.template($('#repository-list-item').html()),
+        template: $('#repository-list-item').html(),
         initialize: function() {
             this.model.on('change', this.render, this);
         },
 
         render: function() {
-            this.$el.html(this.template(this.model.toJSON()));
+            var markup = Mustache.to_html(this.template, this.model.toJSON());
+            this.$el.html(markup);
             return this;
         }
     });
