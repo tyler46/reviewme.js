@@ -17,13 +17,12 @@ define([
         list: function(){
             this.repositoryList = new Repositories();
             this.repositoryListView = new RepositoryListView({ model: this.repositoryList });
-            this.repositoryList.fetch();
+            this.repositoryList.fetchAll();
             $('#repositories').html(this.repositoryListView.render().el);
         },
 
         repositoryDetails: function(id) {
             this.repository = this.repositoryList.get(id);
-            console.log(this.repository);
             this.repositoryDetailsView = new RepositoryDetailsView({ model: this.repository });
             $('#repository-details').html(this.repositoryDetailsView.render().el);
         }
