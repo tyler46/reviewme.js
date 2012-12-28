@@ -1,0 +1,13 @@
+{
+    "name": "reviewme.js",
+    "description": "A Backbone.js app using GitHub API for Pull Requst Listing.",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:glogiotatidis/reviewme.js.git"
+    },  
+    "main": "./index.html",
+    "dependencies": {}, 
+    "devDependencies": {}, 
+    "optionalDependencies": {}
+}
