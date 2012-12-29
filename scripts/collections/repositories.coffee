@@ -37,7 +37,7 @@ define([
         fetchNew: (options) ->
             options = options or {}
             collection = this
-                success = options.success
+            success = options.success
 
             options.success = (resp, status, xhr) ->
                 _(collection.parse(resp, xhr)).each((item) ->
