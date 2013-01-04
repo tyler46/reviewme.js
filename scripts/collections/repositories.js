@@ -13,7 +13,7 @@ define([
         },
 
         comparator: function(repository) {
-            return repository.get('name').toLowerCase();
+            return - new Date(repository.get('updated_at')).getTime();
         },
         fetchAll: function() {
             this.page = 1; // start from first page
