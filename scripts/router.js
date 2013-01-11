@@ -17,7 +17,7 @@ define([
         list: function(){
             this.repositoryList = new Repositories();
             this.repositoryListView = new RepositoryListView({ model: this.repositoryList });
-            this.repositoryList.fetchAll();
+            this.repositoryList.fetch();
             $('#repositories').html(this.repositoryListView.render().el);
         },
 
