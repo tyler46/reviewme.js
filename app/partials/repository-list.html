@@ -9,6 +9,11 @@
         <option value="name">Alphabetical</option>
         <option value="updated_at">Newest</option>
       </select>
+      Select by Language:
+      <select ng-model="language"
+          ng-options="repository.language for repository in repositories | unique: 'language'">
+          <option value="">All</option>
+      </select>
 
     </div>
     <div class="col-md-10">
