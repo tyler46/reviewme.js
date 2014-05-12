@@ -1,15 +1,15 @@
 {
-  "name": "angular-seed",
-  "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "name": "reviewme.js",
+  "private": false,
+  "version": "1.0.0",
+  "description": "AngularJS and Github API",
+  "repository": "https://github.com/glogiotatidis/reviewme.js",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
     "protractor": "~0.17.0",
     "http-server": "^0.6.1",
-    "bower": "^1.3.1",
+    "bower": "^1.3.3",
     "shelljs": "^0.2.6"
   },
   "scripts": {
